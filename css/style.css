@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#header {
+    padding: 40px 0;
+    position: relative;
+    z-index: 1000;
+    transition: 300ms all;
+}
+
+#header:hover {
+    background: #fff;
+    color: #000;
+}
+
+#header:hover .logo svg {
+    fill: #000;
+}
+
+#header:hover a {
+    color: #000 !important;
+}
+
+#header .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#header .header-container .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .header-container .header-row nav ul {
+    display: flex;
+}
+
+#header .header-container .header-row nav ul li {
+    margin-left: 50px;
+}
+
+#header .header-container .header-row nav ul li:first-child {
+    margin-left: 0;
+}
+
+#header .header-container .header-row nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#header .logo {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo svg {
+    fill: #fff;
+}
+
+#header .logo a {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+#header .logo svg {
+    width: 20px;
+}
+
+main {
+    position: absolute;
+    top: 0;
+}
+
+main #galary .container .row {
+    display: flex;
+}
+
+main #galary .container .row .galary-item {
+    width: 55%;
+    height: 100vh;
+    transition: width 200ms;
+}
+
+main #galary .container .row .galary-item {
+    position: relative;
+}
+
+main #galary .container .row .galary-item .img-text {
+    position: absolute;
+    bottom: 3px;
+    left: 50px;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 30px;
+    transition: 300ms all;
+}
+
+main #galary .container .row .galary-item:hover .img-text {
+    visibility: visible;
+    opacity: 1;
+    bottom: 100px;
+}
+
+main #galary .container .row .galary-item .img-text span {
+    display: flex;
+    align-items: center;
+}
+
+main #galary .container .row .galary-item .img-text span svg {
+    fill: #fff;
+    width: 30px;
+    margin-left: 20px;
+}
+
+main #galary .container .row .galary-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+main #galary .container .row .galary-item:hover {
+    width: 100%;
+}
+
+
+/* Responsive code */
+@media only screen and (max-width:1200px) {
+    main #galary .container .row {
+        flex-wrap: wrap;
+    }
+
+    main #galary .container .row .galary-item {
+        flex-basis: 50%;
+        height: 600px;
+    }
+
+    #header {
+        padding: 30px 20px;
+    }
+
+}
+
+@media only screen and (max-width:578px) {
+    #header .header-row {
+        flex-direction: column;
+    }
+
+    #header .header-container .logo a {
+        color: #000;
+    }
+
+    #header .header-container .logo svg {
+        fill: #000;
+    }
+
+    #header .header-container .header-row nav ul li a {
+        color: #000;
+    }
+
+    main {
+        position: relative;
+    }
+
+    #header {
+        padding: 15px 0;
+    }
+
+    main #galary .container .row .galary-item {
+        height: 400px;
+    }
+
+    #header .header-container .header-row nav ul li {
+        margin-left: 25px;
+    }
+
+    #header .header-container .header-row nav ul li a {
+        font-size: 15px;
+    }
+
+    #header .header-row .logo {
+        margin-bottom: 20px;
+    }
+
+    #header .header-row .logo a {
+        font-size: 20px;
+    }
+
+    main #galary .container .row .galary-item .img-text {
+        left: 20px;
+        font-size: 25px;
+        bottom: 50px;
+    }
+
+    main #galary .container .row .galary-item .img-text span svg {
+        width: 25px;
+        margin-left: 10px;
+    }
+}
